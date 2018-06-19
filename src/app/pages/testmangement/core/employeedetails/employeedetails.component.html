@@ -1,0 +1,33 @@
+<amexio-card [footer]="true" [header]="true" [show]="true" [header-align]="'left'" [footer-align]="'right'">
+    <amexio-header>
+        Employee Details
+    </amexio-header>
+    <amexio-body>
+        <amexio-text-input [field-label]="'Emp Id'" [(ngModel)]="employeedetailsModel.id" name="employeedetailsModel.id" [allow-blank]="true" [min-length]="0" [max-length]="20" [font-size]="10" [has-label]="true">
+        </amexio-text-input>
+        <amexio-text-input [field-label]="'First Name'" [(ngModel)]="employeedetailsModel.firstName" name="employeedetailsModel.firstName" [allow-blank]="true" [min-length]="0" [max-length]="20" [font-size]="10" [has-label]="true">
+        </amexio-text-input>
+        <amexio-text-input [field-label]="'Last Name'" [(ngModel)]="employeedetailsModel.lastName" name="employeedetailsModel.lastName" [allow-blank]="true" [min-length]="0" [max-length]="20" [font-size]="10" [has-label]="true">
+        </amexio-text-input>
+        <amexio-radio-group [field-label]="'Gender'" name="employeedetailsModel.genderId" [data-reader]="'data'" [display-field]="'gender'" [value-field]="'genderId'" [data]="radiogroupData" [horizontal]="true">
+        </amexio-radio-group>
+        <amexio-text-input [field-label]="'DOB'" [(ngModel)]="employeedetailsModel.dob" name="employeedetailsModel.dob" [allow-blank]="true" [min-length]="0" [max-length]="20" [font-size]="10" [has-label]="true">
+        </amexio-text-input>
+        <amexio-number-input [field-label]="'Age'" [(ngModel)]="employeedetailsModel.age" name="employeedetailsModel.age" [allow-blank]="true" [font-size]="10" [has-label]="true" [min-value]="0" [max-value]="20">
+        </amexio-number-input>
+        <amexio-text-input [field-label]="'phone'" [(ngModel)]="employeedetailsModel.phone" name="employeedetailsModel.phone" [allow-blank]="true" [min-length]="0" [max-length]="20" [font-size]="10" [has-label]="true">
+        </amexio-text-input>
+        <amexio-email-input [field-label]="'Email'" [(ngModel)]="employeedetailsModel.email" name="employeedetailsModel.email" [allow-blank]="true" [font-size]="10" [has-label]="true">
+        </amexio-email-input>
+        <amexio-dropdown [(ngModel)]="employeedetailsModel.departmentId" name="employeedetailsModel.departmentId" [field-label]="'Department'" [http-url]="'https://uat.amexio.org:8991/rest-sample-app/api/dept/findall'" [http-method]="'get'" [display-field]="'name'"
+            [value-field]="'id'">
+        </amexio-dropdown>
+
+    </amexio-body>
+
+    <amexio-action>
+        <amexio-button [label]="'Save'" [icon]="'fa fa-save fa 2x'" [type]="'default'" [tooltip]="'button'" [size]="'default'" [form-bind]="'btn'" (onClick)="onClick_btn($event)">
+        </amexio-button>
+
+    </amexio-action>
+</amexio-card>

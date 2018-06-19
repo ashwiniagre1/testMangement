@@ -1,0 +1,7 @@
+<amexio-row>
+    <amexio-column size="12">
+        <amexio-dropdown [(ngModel)]="employeelistModel.emp" [place-holder]="'Select Employee'" name="employeelistModel.emp" [field-label]="'Employee list'" [http-url]="'https://uat.amexio.org:8991/rest-sample-app/api/emp/findall'" [http-method]="'get'" [display-field]="'firstName'"
+            [value-field]="'id'">
+        </amexio-dropdown>
+    </amexio-column>
+</amexio-row>
