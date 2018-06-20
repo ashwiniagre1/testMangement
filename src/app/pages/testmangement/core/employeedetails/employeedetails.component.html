@@ -22,6 +22,61 @@
         <amexio-dropdown [(ngModel)]="employeedetailsModel.departmentId" name="employeedetailsModel.departmentId" [field-label]="'Department'" [http-url]="'https://uat.amexio.org:8991/rest-sample-app/api/dept/findall'" [http-method]="'get'" [display-field]="'name'"
             [value-field]="'id'">
         </amexio-dropdown>
+        <amexio-fieldset [title]="'Temp Address'">
+            <amexio-row>
+                <amexio-column size="6">
+                    <amexio-text-input [field-label]="'Adress label'" [(ngModel)]="employeedetailsModel.addressLabel" name="employeedetailsModel.addressLabel" [allow-blank]="true" [min-length]="0" [max-length]="20" [font-size]="10" [has-label]="true">
+                    </amexio-text-input>
+                </amexio-column>
+                <amexio-column size="6">
+                    <amexio-text-input [field-label]="'Address one'" [(ngModel)]="employeedetailsModel.addressone" name="employeedetailsModel.addressone" [allow-blank]="true" [min-length]="0" [max-length]="20" [font-size]="10" [has-label]="true">
+                    </amexio-text-input>
+                </amexio-column>
+            </amexio-row>
+
+            <amexio-row>
+                <amexio-column size="6">
+                    <amexio-text-input [field-label]="'City'" [(ngModel)]="employeedetailsModel.city" name="employeedetailsModel.city" [allow-blank]="true" [min-length]="0" [max-length]="20" [font-size]="10" [has-label]="true">
+                    </amexio-text-input>
+                </amexio-column>
+                <amexio-column size="6">
+                    <amexio-number-input [field-label]="'Zipcode'" [(ngModel)]="employeedetailsModel.zip" name="employeedetailsModel.zip" [allow-blank]="true" [font-size]="10" [has-label]="true" [min-value]="0" [max-value]="20">
+                    </amexio-number-input>
+                </amexio-column>
+            </amexio-row>
+
+        </amexio-fieldset>
+        <amexio-row>
+            <amexio-column size="12">
+                <amexio-checkbox [field-label]="'Same as address'" [(ngModel)]="employeedetailsModel.chk" name="employeedetailsModel.chk" [required]="true" (onSelection)="onSelection_chk($event)">
+                </amexio-checkbox>
+            </amexio-column>
+        </amexio-row>
+
+        <amexio-fieldset [title]="'permanent address'">
+            <amexio-row>
+                <amexio-column size="6">
+                    <amexio-text-input [field-label]="'Adress label'" [(ngModel)]="employeedetailsModel.addressLabelone" name="employeedetailsModel.addressLabelone" [allow-blank]="true" [min-length]="0" [max-length]="20" [font-size]="10" [has-label]="true">
+                    </amexio-text-input>
+                </amexio-column>
+                <amexio-column size="6">
+                    <amexio-text-input [field-label]="'Adress one'" [(ngModel)]="employeedetailsModel.streetadd" name="employeedetailsModel.streetadd" [allow-blank]="true" [min-length]="0" [max-length]="20" [font-size]="10" [has-label]="true">
+                    </amexio-text-input>
+                </amexio-column>
+            </amexio-row>
+
+            <amexio-row>
+                <amexio-column size="6">
+                    <amexio-text-input [field-label]="'City'" [(ngModel)]="employeedetailsModel.cityname" name="employeedetailsModel.cityname" [allow-blank]="true" [min-length]="0" [max-length]="20" [font-size]="10" [has-label]="true">
+                    </amexio-text-input>
+                </amexio-column>
+                <amexio-column size="6">
+                    <amexio-number-input [field-label]="'Zipcode'" [(ngModel)]="employeedetailsModel.zipcode" name="employeedetailsModel.zipcode" [allow-blank]="true" [font-size]="10" [has-label]="true" [min-value]="0" [max-value]="20">
+                    </amexio-number-input>
+                </amexio-column>
+            </amexio-row>
+
+        </amexio-fieldset>
 
     </amexio-body>
 

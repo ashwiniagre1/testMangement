@@ -1,0 +1,44 @@
+<amexio-row>
+    <amexio-column size="10">
+        <amexio-dropdown [(ngModel)]="employeedataModel.id" name="employeedataModel.id" [field-label]="'Employee'" [http-url]="'https://uat.amexio.org:8991/rest-sample-app/api/emp/findall'" [http-method]="'get'" [display-field]="'firstName'" [value-field]="'id'"
+            [search]="'true'" (onSingleSelect)="onSingleSelect_id($event)">
+        </amexio-dropdown>
+    </amexio-column>
+    <amexio-column size="2">
+        <amexio-button [label]="'Get data'" [type]="'default'" [tooltip]="'button'" [size]="'default'" [form-bind]="'getBtn'" (onClick)="onClick_getBtn($event)">
+        </amexio-button>
+    </amexio-column>
+</amexio-row>
+
+<amexio-row>
+    <amexio-column size="12">
+        <amexio-text-input [field-label]="'emp Id'" [(ngModel)]="employeedataModel.empid" name="employeedataModel.empid" [allow-blank]="true" [min-length]="0" [max-length]="20" [font-size]="10" [has-label]="true">
+        </amexio-text-input>
+    </amexio-column>
+</amexio-row>
+
+<amexio-row>
+    <amexio-column size="12">
+        <amexio-text-input [field-label]="'First name'" [(ngModel)]="employeedataModel.firstName" name="employeedataModel.firstName" [allow-blank]="true" [min-length]="0" [max-length]="20" [font-size]="10" [has-label]="true">
+        </amexio-text-input>
+    </amexio-column>
+</amexio-row>
+
+<amexio-row>
+    <amexio-column size="12">
+        <amexio-text-input [field-label]="'Last name'" [(ngModel)]="employeedataModel.lastName" name="employeedataModel.lastName" [allow-blank]="true" [min-length]="0" [max-length]="20" [font-size]="10" [has-label]="true">
+        </amexio-text-input>
+    </amexio-column>
+</amexio-row>
+
+<amexio-row>
+    <amexio-column size="12">
+        <amexio-text-input [field-label]="'age'" [(ngModel)]="employeedataModel.age" name="employeedataModel.age" [allow-blank]="true" [min-length]="0" [max-length]="20" [font-size]="10" [has-label]="true">
+        </amexio-text-input>
+    </amexio-column>
+</amexio-row>
+
+<amexio-row>
+    <amexio-column size="12">
+    </amexio-column>
+</amexio-row>
