@@ -1,5 +1,5 @@
 /**
- * Created by: Ashwini Agre
+ * Created by: deepali arvind
  * Date: 20/06/2018
  * Organization: Individual	
  */
@@ -34,7 +34,7 @@ age :this.employeedetailsModel.age,
 dob :this.employeedetailsModel.dob,
 phone :this.employeedetailsModel.phone,
 email :this.employeedetailsModel.email,
-departmentId :this.employeedetailsModel.departmentId
+departmentId :this.employeedetailsModel.departmentId,
 };
 this.http.post('https://uat.amexio.org:8991/rest-sample-app/api/emp/save',requestJson).subscribe(
 (res: any) => {

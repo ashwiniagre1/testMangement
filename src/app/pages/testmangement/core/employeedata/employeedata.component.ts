@@ -1,5 +1,5 @@
 /**
- * Created by: Ashwini Agre
+ * Created by: deepali arvind
  * Date: 20/06/2018
  * Organization: Individual	
  */
@@ -21,14 +21,6 @@ export class EmployeedataComponent implements OnInit{
 let response: any;
 const requestJson={
 id :this.employeedataModel.id,
-firstName :this.employeedataModel.id,
-lastName :this.employeedataModel.id,
-genderId :this.employeedataModel.id,
-age :this.employeedataModel.id,
-dob :this.employeedataModel.id,
-phone :this.employeedataModel.id,
-email :this.employeedataModel.id,
-departmentId :this.employeedataModel.id
 };
 this.http.post('https://uat.amexio.org:8991/rest-sample-app/api/emp/findById',requestJson).subscribe(
 (res: any) => {
@@ -42,10 +34,10 @@ this.getBtnBindResponse_1(response);
 });
 }
 getBtnBindResponse_1(response: any){
-this.employeedataModel.empid =response.Employee.id; 
-this.employeedataModel.firstName =response.Employee.firstName; 
-this.employeedataModel.lastName =response.Employee.lastName; 
-this.employeedataModel.age =response.Employee.age; 
+this.employeedataModel.empid =response.response.id; 
+this.employeedataModel.firstName =response.response.firstName; 
+this.employeedataModel.lastName =response.response.lastName; 
+this.employeedataModel.age =response.response.age; 
 
 
  } 
